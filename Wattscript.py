@@ -83,7 +83,7 @@ with open('%s.html'%fanfic_title,'w',encoding="utf-8") as f:
 	f.write(all_fanfic)
 
 print('[*] gerando pdf')
-r = os.system(f'wkhtmltox\\bin\\wkhtmltopdf.exe {fanfic_title}.html {fanfic_title}.pdf 2> nul')
+r = os.system(os.getcwd()+f'\\wkhtmltox\\bin\\wkhtmltopdf.exe "{fanfic_title}.html" "{fanfic_title}.pdf"')
 downloadUrl = ''
 
 if r==0:
